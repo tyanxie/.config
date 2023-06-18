@@ -67,11 +67,13 @@ alias j=/Users/<username>/.config/joshuto/joshuto_image.sh
 
 # Neovim
 
-官方网站：https://neovim.io/
+官方网站：https://neovim.io。
 
-官方配置文档：https://neovim.io/doc/user/lua-guide.html
+官方配置文档：https://neovim.io/doc/user/lua-guide.html。
 
-安装方式：`brew install neovim`
+安装方式：`brew install neovim`。
+
+为了方便打开Neovim，你可以设置快捷方式来覆盖vim命令，例如在zsh下可以这么做：`alias vim=nvim`。
 
 本仓库的Neovim配置是使用nvchad来生成并自定义的，nvchad的官方网站是：https://nvchad.com，这是一个开箱即用的集成了大量常见常用的vim配置和插件的工具，并且优化了启动速度，使得性能也有显著的提升。bilibili上有一个nvchad的入门视频：https://www.bilibili.com/video/BV1Ga4y1g7fq。
 
