@@ -28,6 +28,14 @@
 
 Kitty使用直接编辑配置文件的方式来修改配置，重新加载Kitty的配置文件有多种方法，例如可以使用快捷键`control`+`command`+`,`，此外也可以向Kitty进程发送`SIGUSR1`命令，发送方式为`kill -SIGUSR1 <pid>`，其中pid为Kitty进程的pid。
 
+如果想要修改kitty的主题，可以使用以下命令：
+
+```shell
+kitty +kitten themes --reload-in=all <optional: theme name>
+```
+
+其中，如果不填写theme name，那么就会进入选择模式，如果填写theme name，那么就会直接讲主题切换为theme name指定的内容。
+
 # joshuto
 
 [joshuto](https://github.com/kamiyaa/joshuto)是一个使用rust编写的类似ranger的终端下文件管理器。
