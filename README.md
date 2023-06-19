@@ -36,6 +36,20 @@ kitty +kitten themes --reload-in=all <optional: theme name>
 
 其中，如果不填写theme name，那么就会进入选择模式，如果填写theme name，那么就会直接讲主题切换为theme name指定的内容。
 
+当使用Kitty访问远程服务器的时候，很可能出现终端不兼容的情况，比如执行clear命令报错`'xterm-kitty': unknown terminal type.`，或者Kitty显示乱码，事实上在使用Kitty进行ssh的时候需要按照如下方式进行启动：
+
+```shell
+kitty +kitten ssh <destination>
+```
+
+上述命令中的`<destionation>`代表ssh的目标，我们可以使用别名来让这个命令的使用更加简单，例如在`.zshrc`中可以这样配置（注意双引号`""`不可缺少）：
+
+```shell
+alias s="kitty +kitten ssh"
+```
+
+在使用Kitty的过程中可能会遇到许多问题，这个时候参考其[帮助文档](https://sw.kovidgoyal.net/kitty/faq/)可能会有比较大的帮助。
+
 # joshuto
 
 [joshuto](https://github.com/kamiyaa/joshuto)是一个使用rust编写的类似ranger的终端下文件管理器。
