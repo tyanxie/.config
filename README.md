@@ -26,6 +26,8 @@
    curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
    ```
 
+Kitty使用直接编辑配置文件的方式来修改配置，重新加载Kitty的配置文件有多种方法，例如可以使用快捷键`control`+`command`+`,`，此外也可以向Kitty进程发送`SIGUSR1`命令，发送方式为`kill -SIGUSR1 <pid>`，其中pid为Kitty进程的pid。
+
 # joshuto
 
 [joshuto](https://github.com/kamiyaa/joshuto)是一个使用rust编写的类似ranger的终端下文件管理器。
