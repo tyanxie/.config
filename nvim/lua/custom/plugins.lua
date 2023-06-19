@@ -47,6 +47,11 @@ local plugins = {
     end,
   },
 
+  {
+    "fladson/vim-kitty",
+    ft = "kitty",
+  },
+
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",
