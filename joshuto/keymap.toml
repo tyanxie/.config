@@ -98,8 +98,8 @@ keymap = [
   { keys = [";"], command = ":" },
 
   { keys = ["'"], command = ":shell " },
-  { keys = ["e", "v"], command = "shell nvim %s" },
-  { keys = ["e", "o"], command = "shell open %s" },
+  { keys = ["v"], command = "shell nvim %s" },
+  { keys = ["o"], command = "shell open %s" },
 
   { keys = ["m", "k"], command = ":mkdir " },
   { keys = ["c", "w"], command = ":rename " },
