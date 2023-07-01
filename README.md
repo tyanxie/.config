@@ -5,50 +5,7 @@
 # 使用前必读
 
 1. 使用方式：将本仓库所有内容覆盖至`~/.config`目录下即可。
-2. 本配置仓库中的部份内容依赖kitty终端，如果不使用该终端则会导致体验下降，强烈建议安装Kitty终端来使用。
 3. 本配置仓库中依赖字体`MesloLGS Nerd Font`，可以在其[官方仓库](https://github.com/ryanoasis/nerd-fonts)中找到并下载`Meslo.zip`文件后安装即可，截止本文档编写期间，该字体的最新版本为[3.0.2](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/Meslo.zip)。
-
-# Kitty
-
-[Kitty](https://sw.kovidgoyal.net/kitty)是一个能显示图片的强大终端，并且有着极佳的视觉效果。
-
-安装方式：
-
-1. 使用brew进行安装。
-
-   ```shell
-   brew install kitty
-   ```
-
-2. 按照官方文档进行安装。
-
-   ```shell
-   curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
-   ```
-
-Kitty使用直接编辑配置文件的方式来修改配置，重新加载Kitty的配置文件有多种方法，例如可以使用快捷键`control`+`command`+`,`，此外也可以向Kitty进程发送`SIGUSR1`命令，发送方式为`kill -SIGUSR1 <pid>`，其中pid为Kitty进程的pid。
-
-如果想要修改kitty的主题，可以使用以下命令：
-
-```shell
-kitty +kitten themes --reload-in=all <optional: theme name>
-```
-
-其中，如果不填写theme name，那么就会进入选择模式，如果填写theme name，那么就会直接讲主题切换为theme name指定的内容。
-
-当使用Kitty访问远程服务器的时候，很可能出现终端不兼容的情况，比如执行clear命令报错`'xterm-kitty': unknown terminal type.`，或者Kitty显示乱码，事实上在使用Kitty进行ssh的时候需要按照如下方式进行启动：
-
-```shell
-kitty +kitten ssh <destination>
-```
-
-上述命令中的`<destionation>`代表ssh的目标，我们可以使用别名来让这个命令的使用更加简单，例如在`.zshrc`中可以这样配置（注意双引号`""`不可缺少）：
-
-```shell
-alias s="kitty +kitten ssh"
-```
-
-在使用Kitty的过程中可能会遇到许多问题，这个时候参考其[帮助文档](https://sw.kovidgoyal.net/kitty/faq/)可能会有比较大的帮助。
 
 # joshuto
 
@@ -83,10 +40,10 @@ sudo cargo install --path=. --force --root=/usr/local
 brew install bat
 ```
 
-如果要让joshuto能够预览文件，那么需要确保你正在使用Kitty终端，并且使用脚本`~/.config/joshuto/joshuto_image.sh`启动脚本，注意该脚本需要使用`/bin/zsh`进行启动，为方便起见，可以使用zsh的`alias`指令来制定启动快捷键，例如可以在`.zshrc`文件中指定如下的快捷键`j`（注意修改`<username>`为你的用户名）：
+为方便起见，可以使用zsh的`alias`指令来制定启动快捷键，例如可以在`.zshrc`文件中指定如下的快捷键`j`：
 
 ```shell
-alias j=/Users/<username>/.config/joshuto/joshuto_image.sh
+alias j=joshuto
 ```
 
 # Neovim
